@@ -13,6 +13,7 @@ try {
       } docker service inspect ${serviceName} --format "{{.UpdateStatus.State}}"`,
     )
     .toString()
+    .trim()
 
   if (updateStatus !== 'completed') {
     return core.setFailed(`${serviceName} update status is: ${updateStatus}, please verify your deployment!`)
