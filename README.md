@@ -18,6 +18,8 @@ This action checks the update status of a service in a docker swarm and throws a
 
 ## Exemplo de uso
 
+```yaml
 uses: actions/verify-swarm-update-action@v1
 with:
   service-name: 'my-service-name'
+```
