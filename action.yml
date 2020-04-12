@@ -1,0 +1,17 @@
+name: 'Verify swarm service update status'
+description: 'Verify swarm service update status'
+inputs:
+  service-name:
+    description: 'Docker swarm service name'
+    required: true
+  entrypoint:
+    description: 'Command added before the inspect service command'
+    required: false
+    default: ''
+  run-as-su:
+    description: 'Should run as super user?'
+    required: false
+    default: false
+runs:
+  using: 'node12'
+  main: 'index.js'
